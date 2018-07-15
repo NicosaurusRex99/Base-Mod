@@ -1,0 +1,16 @@
+[
+{
+  "modid": "basemod",
+  "name": "Base Mod",
+  "description": "Base Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["NicosaurusRex99"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
