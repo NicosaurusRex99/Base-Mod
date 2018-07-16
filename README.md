@@ -8,21 +8,23 @@ How to use
 
 2. shift right click the mod folder and select powershell
 
-3. run ./gradlew setupDecompWorkspace
+3. install forge mdk
 
-4. wait
+4. run ./gradlew setupDecompWorkspace
 
-5. run ./gradlew eclipse (or idea)
+5. wait
 
-6. open your ide and select the mod folder
+6. run ./gradlew eclipse (or idea)
 
-7. change the main mod class to your modname
+7. open your ide and select the mod folder
 
-8. edit the strings on that page
+8. change the main mod class to your modname
 
-9. goto registry and add blocks and items using the bases provided (or make your own)
+9. edit the strings on that page
 
-10. add the resources and localization
+10. goto registry and add blocks and items using the bases provided (or make your own)
+
+11. add the resources and localization
 
 to build 
 
