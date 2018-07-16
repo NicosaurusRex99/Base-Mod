@@ -8,7 +8,7 @@ How to use
 
 2. shift right click the mod folder and select powershell
 
-3. install forge mdk
+3. install [forge mdk](https://files.minecraftforge.net/)
 
 4. run ./gradlew setupDecompWorkspace
 
