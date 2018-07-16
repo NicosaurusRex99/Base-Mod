@@ -24,9 +24,9 @@ run ./gradlew build
 
 
 Links to help learn how to add Localization
-TEXTURE ITEMS
-https://shadowfacts.net/tutorials/forge-modding-112/json-item-models/
-TEXTURE BLOCKS
-https://shadowfacts.net/tutorials/forge-modding-112/basic-forge-blockstates/
-BETTER NAMES
-https://shadowfacts.net/tutorials/forge-modding-112/localization/
+
+[TEXTURE ITEMS](https://shadowfacts.net/tutorials/forge-modding-112/json-item-models/)
+
+[TEXTURE BLOCKS](https://shadowfacts.net/tutorials/forge-modding-112/basic-forge-blockstates/)
+
+[BETTER NAMES](https://shadowfacts.net/tutorials/forge-modding-112/localization/)
