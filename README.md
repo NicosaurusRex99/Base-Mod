@@ -3,24 +3,40 @@ This is a base mod (proxies reegistry and main class)
 
 
 How to use
-Clone this mod (or fork)
-shift right click the mod folder and select powershell
-run ./gradlew setupDecompWorkspace
-wait
-run ./gradlew eclipse (or idea)
-open your ide and select the mod folder
-change the main mod class to your modname
-edit the strings on that page
-goto registry and add blocks and items using the bases provided (or make your own)
-add the resources and localization
+
+1. Clone this mod (or fork)
+
+2. shift right click the mod folder and select powershell
+
+3. run ./gradlew setupDecompWorkspace
+
+4. wait
+
+5. run ./gradlew eclipse (or idea)
+
+6. open your ide and select the mod folder
+
+7. change the main mod class to your modname
+
+8. edit the strings on that page
+
+9. goto registry and add blocks and items using the bases provided (or make your own)
+
+10. add the resources and localization
 
 to build 
-open build.gradlew
-modify version
-modify group
-modify archivesBaseName
-open powershell
-run ./gradlew build
+
+1. open build.gradlew
+
+2. modify version
+
+3. modify group
+
+4. modify archivesBaseName
+
+5. open powershell
+
+6. run ./gradlew build
 
 
 Links to help learn how to add Localization
