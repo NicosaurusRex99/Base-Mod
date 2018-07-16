@@ -5,6 +5,9 @@ import org.apache.logging.log4j.Logger;
 import naturix.basemod.proxy.CommonProxy;
 import naturix.basemod.registry.ModBlocks;
 import naturix.basemod.registry.ModItems;
+import naturix.basemod.registry.ModOreDict;
+import naturix.basemod.registry.ModRecipes;
+import naturix.basemod.world.ModWorldGen;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -18,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -38,11 +42,13 @@ public class BaseMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(NAME + " is loading!");
+        GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+		ModOreDict.initOreDict();
+		ModRecipes.init();
 	}
 
 	@Mod.EventHandler
