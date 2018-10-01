@@ -1,7 +1,5 @@
 package naturix.basemod;
 
-import org.apache.logging.log4j.Logger;
-
 import naturix.basemod.proxy.CommonProxy;
 import naturix.basemod.registry.ModBlocks;
 import naturix.basemod.registry.ModItems;
@@ -15,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -34,14 +33,14 @@ public class BaseMod {
 
 	@Mod.Instance(MODID)
 	public static BaseMod instance;
-    public static Logger logger;
+	public static org.apache.logging.log4j.Logger logger;
     
 	@SidedProxy(clientSide = "naturix.basemod.proxy.ClientProxy", serverSide = "naturix.basemod.proxy.ServerProxy")
     public static CommonProxy proxy;
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println(NAME + " is loading!");
+		FMLLog.getLogger().info(NAME + " is loading!");
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 	}
 
