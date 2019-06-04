@@ -1,29 +1,33 @@
 package naturix.basemod.blocks;
 
 import naturix.basemod.BaseMod;
+import naturix.basemod.registry.ModBlocks;
+import naturix.basemod.registry.ModItems;
+import naturix.basemod.utils.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
-public class BlockBase extends Block {
+public class BlockBase extends Block implements IHasModel {
 
-	protected String name;
+    protected String name;
 
-	public BlockBase(Material material, String name) {
-		super(material);
-	
-		this.name = name;
-		setCreativeTab(BaseMod.TAB);
-		setUnlocalizedName(name);
-		setRegistryName(name);
-	}
-	
-	public void registerItemModel(Item itemBlock) {
-		BaseMod.proxy.registerItemRenderer(itemBlock, 0, name);
-	}
-	
-	public Item createItemBlock() {
-		return new ItemBlock(this).setRegistryName(getRegistryName());
-	}
+    public BlockBase(String name, Material material) {
+        super(material);
+        this.setRegistryName(name);
+        this.setUnlocalizedName(name);
+        
+
+		ModBlocks.BLOCKS.add(this);
+		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+    }
+
+
+
+    @Override
+    public void registerModels() {
+        BaseMod.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+    }
+
 }

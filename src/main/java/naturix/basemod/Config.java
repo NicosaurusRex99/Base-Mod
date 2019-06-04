@@ -8,7 +8,8 @@ import net.minecraftforge.common.config.Configuration;
 public class Config {
 
     private static final String CATEGORY_GENERAL = "general";
-    
+	public static boolean genJSON = false;
+
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
@@ -25,6 +26,8 @@ public class Config {
 
     private static void initGeneralConfig(Configuration cfg) {
         cfg.addCustomCategoryComment(CATEGORY_GENERAL, "General configuration");
+		genJSON = cfg.getBoolean("Generate JSON", CATEGORY_GENERAL, genJSON,
+		        "Enable the generation of JSON files (blockstates, models and recipes)");
         }
 
 }

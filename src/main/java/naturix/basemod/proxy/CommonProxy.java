@@ -4,8 +4,6 @@ import java.io.File;
 
 import naturix.basemod.BaseMod;
 import naturix.basemod.Config;
-import naturix.basemod.registry.ModSeeds;
-import naturix.basemod.registry.ModSpawns;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -21,8 +19,6 @@ public class CommonProxy {
     	File directory = e.getModConfigurationDirectory();
         config = new Configuration(new File(directory.getPath(), "naturix/"+ BaseMod.MODID +".cfg"));
         Config.readConfig();
-        ModSeeds.init();
-        ModSpawns.init();
     }
 
     public void init(FMLInitializationEvent e) {

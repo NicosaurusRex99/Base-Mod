@@ -1,19 +1,21 @@
 package naturix.basemod.registry;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+import naturix.basemod.utils.GenerateJSON;
 import net.minecraft.item.Item;
-import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems {
-	//public static ItemBase ingotCopper = new ItemBase("ingot_copper");
+    public static final List<Item> ITEMS = new ArrayList<Item>();
 
-	public static void register(IForgeRegistry<Item> registry) {
-		//registry.register(
-								
-				//);
-	}
-	
-	public static void registerModels() {
-		//ingotCopper.registerModel
-	}
+    //howto add items
+//    public static Item basicItem = new ItemBase("basic_item");
+    public static void init() {
+    }
 
+    public static void CreateJSONs() {
+        GenerateJSON.generateItemModelJSONs();
+    }
 }

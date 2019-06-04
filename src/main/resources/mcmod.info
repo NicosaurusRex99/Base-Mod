@@ -1,16 +1,17 @@
 [
-{
-  "modid": "basemod",
-  "name": "Base Mod",
-  "description": "Base Mod",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["NicosaurusRex99"],
-  "credits": "",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "basemod",
+    "name": "BaseMod",
+    "description": "",
+    "version": "1.12.2.0",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authors": ["NicosaurusRex99", "YourName"],
+    "credits": "NicosaurusRex99",
+    "logoFile": "logo.png",
+    "screenshots": [],
+    "parent":"",
+    "dependencies": []
+  }
 ]
