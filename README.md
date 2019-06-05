@@ -1,0 +1,11 @@
+# Base-Mod
+- To make a basic mod
+- Clone this repo
+- install the latest forge mdk
+- run `./gradlew setupDecompWorkspace`
+- run `./gradlew eclipse` or `./gradlew idea` depending on your ide
+- change the mod name from base mod
+- add items and blocks in the registry using the example
+- add custom blocks and items in the correct package (making sure they `implement IHasModel`)
+- test your mod
+- run `./gradlew build` and the mod will be in `dir/build/libs/<modname>.jar`
